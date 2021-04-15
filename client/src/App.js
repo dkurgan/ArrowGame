@@ -45,6 +45,8 @@ export default function App() {
             return;
         }
         const targetPos = document.querySelector('.target').offsetLeft;
+        const archer = document.querySelector('.archer').offsetLeft;
+        setArrowPos(archer);
         if (arrowPos === targetPos) {
             setArrowVisible(0);
             setArrowPos(0);
