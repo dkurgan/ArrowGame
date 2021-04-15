@@ -8,29 +8,29 @@ export default function App() {
     const [arrowPos, setArrowPos] = useState(0);
     const [arrowVisible, setArrowVisible] = useState(0);
     const [clicked, setClicked] = useState(true);
-    const [power, setPower] = useState(0);
     const [target, setTarget] = useState(0);
     const [score, setScore] = useState(0);
-    let date1 = new Date();
-    let date2 = new Date();
-
+    const [timer, setTimer] = useState(0.0);
+    const intervalId = setInterval(() => setTimer(timer + 0.1), 100);
+    const [intervalState, setIntervalState] = useState(null);
     function calculateScore() {
-        const distance = power * 5 / 10;
+        const distance = timer * 5 * 10;
         console.log(`shot distance ${distance}`);
         const diference = Math.abs(distance - target);
         switch (diference) {
-            case ((diference >= 2 && diference < 3) || (diference <= 3 && diference > 2)):
+            case (diference >= 2 && diference <= 3):
                 setScore(score + 1)
                 break;
-            case ((diference >= 1  && diference < 2)|| (diference <= 2 && diference > 1)):
+            case (diference >= 1  && diference <= 2):
                 setScore(score + 3)
                 break;
-            case ((diference >= 0 && diference < 1) || (diference <= 1 && diference > 0)):
+            case (diference >= 0 && diference < 1):
                 setScore(score + 5)
                 break;
             default:
                 break;
         }
+        setTimer(0);
     }
     function getRandomTarget() {
         const random = randomNum(20, 100);
@@ -39,23 +39,23 @@ export default function App() {
     }
     function fireArrow() {
         if (clicked) {
-            date1 = new Date();
+            setIntervalState(intervalId);
             setClicked(false);
             getRandomTarget();
             return;
         }
         const targetPos = document.querySelector('.target').offsetLeft;
-        date2 = new Date()
         if (arrowPos === targetPos) {
             setArrowVisible(0);
             setArrowPos(0);
             setClicked(true);
             return
         }
-        setPower(Math.abs(date2.getMilliseconds() - date1.getMilliseconds()));
+        clearInterval(intervalState);
+        calculateScore();
+        console.log(timer)
         setArrowVisible(1);
         setArrowPos(targetPos);
-        calculateScore();
     }
     return (
         <div className="root">
