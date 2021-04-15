@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/ArrowGame/static/css/main.b57dd25e.chunk.css",
-    "main.js": "/ArrowGame/static/js/main.68e1ab3d.chunk.js",
-    "main.js.map": "/ArrowGame/static/js/main.68e1ab3d.chunk.js.map",
+    "main.css": "/ArrowGame/static/css/main.4dff8aae.chunk.css",
+    "main.js": "/ArrowGame/static/js/main.2ecd84d4.chunk.js",
+    "main.js.map": "/ArrowGame/static/js/main.2ecd84d4.chunk.js.map",
     "runtime-main.js": "/ArrowGame/static/js/runtime-main.5fd408dc.js",
     "runtime-main.js.map": "/ArrowGame/static/js/runtime-main.5fd408dc.js.map",
     "static/js/2.acd6e16c.chunk.js": "/ArrowGame/static/js/2.acd6e16c.chunk.js",
     "static/js/2.acd6e16c.chunk.js.map": "/ArrowGame/static/js/2.acd6e16c.chunk.js.map",
     "index.html": "/ArrowGame/index.html",
-    "static/css/main.b57dd25e.chunk.css.map": "/ArrowGame/static/css/main.b57dd25e.chunk.css.map",
-    "static/js/2.acd6e16c.chunk.js.LICENSE.txt": "/ArrowGame/static/js/2.acd6e16c.chunk.js.LICENSE.txt"
+    "static/css/main.4dff8aae.chunk.css.map": "/ArrowGame/static/css/main.4dff8aae.chunk.css.map",
+    "static/js/2.acd6e16c.chunk.js.LICENSE.txt": "/ArrowGame/static/js/2.acd6e16c.chunk.js.LICENSE.txt",
+    "static/media/archer.31ba6852.png": "/ArrowGame/static/media/archer.31ba6852.png",
+    "static/media/arrow.eca3bd6b.png": "/ArrowGame/static/media/arrow.eca3bd6b.png",
+    "static/media/target.19a02c9d.png": "/ArrowGame/static/media/target.19a02c9d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5fd408dc.js",
     "static/js/2.acd6e16c.chunk.js",
-    "static/css/main.b57dd25e.chunk.css",
-    "static/js/main.68e1ab3d.chunk.js"
+    "static/css/main.4dff8aae.chunk.css",
+    "static/js/main.2ecd84d4.chunk.js"
   ]
 }
