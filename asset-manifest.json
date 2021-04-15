@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ArrowGame/static/css/main.b57dd25e.chunk.css",
+    "main.js": "/ArrowGame/static/js/main.68e1ab3d.chunk.js",
+    "main.js.map": "/ArrowGame/static/js/main.68e1ab3d.chunk.js.map",
+    "runtime-main.js": "/ArrowGame/static/js/runtime-main.5fd408dc.js",
+    "runtime-main.js.map": "/ArrowGame/static/js/runtime-main.5fd408dc.js.map",
+    "static/js/2.acd6e16c.chunk.js": "/ArrowGame/static/js/2.acd6e16c.chunk.js",
+    "static/js/2.acd6e16c.chunk.js.map": "/ArrowGame/static/js/2.acd6e16c.chunk.js.map",
+    "index.html": "/ArrowGame/index.html",
+    "static/css/main.b57dd25e.chunk.css.map": "/ArrowGame/static/css/main.b57dd25e.chunk.css.map",
+    "static/js/2.acd6e16c.chunk.js.LICENSE.txt": "/ArrowGame/static/js/2.acd6e16c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5fd408dc.js",
+    "static/js/2.acd6e16c.chunk.js",
+    "static/css/main.b57dd25e.chunk.css",
+    "static/js/main.68e1ab3d.chunk.js"
+  ]
+}
