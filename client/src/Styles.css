@@ -1,0 +1,33 @@
+.root{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.playground{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.archer{
+    width: 50px;
+    height: 100px;
+    background-color: green;
+}
+.target{
+    width: 50px;
+    height: 100px;
+    background-color: red;
+}
+.arrow{
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: indigo;
+    transition: left 4s;
+}
