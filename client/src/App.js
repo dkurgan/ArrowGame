@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import Button from './Components/Button';
 import Playground from './Components/Playground';
 import randomNum from './helper/randomNum';
@@ -13,17 +13,19 @@ export default function App() {
     const [score, setScore] = useState(0);
     let date1 = new Date();
     let date2 = new Date();
+
     function calculateScore() {
-        const distance = power * 5 * 10;
+        const distance = power * 5 / 10;
+        console.log(`shot distance ${distance}`);
         const diference = Math.abs(distance - target);
         switch (diference) {
-            case (diference >= 2 && diference < 3 || diference <= 3 && diference > 2):
+            case ((diference >= 2 && diference < 3) || (diference <= 3 && diference > 2)):
                 setScore(score + 1)
                 break;
-            case (diference >= 1  && diference < 2|| diference <= 2 && diference > 1):
+            case ((diference >= 1  && diference < 2)|| (diference <= 2 && diference > 1)):
                 setScore(score + 3)
                 break;
-            case (diference >= 0 && diference < 1 || diference <= 1 && diference > 0):
+            case ((diference >= 0 && diference < 1) || (diference <= 1 && diference > 0)):
                 setScore(score + 5)
                 break;
             default:
@@ -32,7 +34,7 @@ export default function App() {
     }
     function getRandomTarget() {
         const random = randomNum(20, 100);
-        console.log(random, "target distance")
+        console.log(random, "distance to the target")
         setTarget(random);
     }
     function fireArrow() {
@@ -48,12 +50,12 @@ export default function App() {
             setArrowVisible(0);
             setArrowPos(0);
             setClicked(true);
-            calculateScore();
             return
         }
-        setPower(Math.abs(date2.getSeconds() - date1.getSeconds()));
+        setPower(Math.abs(date2.getMilliseconds() - date1.getMilliseconds()));
         setArrowVisible(1);
         setArrowPos(targetPos);
+        calculateScore();
     }
     return (
         <div className="root">

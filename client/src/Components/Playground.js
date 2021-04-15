@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Archer from './Archer';
 import Arrow from './Arrow';
 import Target from './Target';
