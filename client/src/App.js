@@ -11,8 +11,12 @@ export default function App() {
     const [target, setTarget] = useState(0);
     const [score, setScore] = useState(0);
     const [timer, setTimer] = useState(0.0);
-    const intervalId = setInterval(() => setTimer(timer + 0.1), 100);
     const [intervalState, setIntervalState] = useState(null);
+
+    function runInterval() {
+        const intervalId = setInterval(() => setTimer((t) => t + 0.1), 100);
+        setIntervalState(intervalId);
+    }
     function calculateScore() {
         const distance = timer * 5 * 10;
         console.log(`shot distance ${distance}`);
@@ -39,7 +43,7 @@ export default function App() {
     }
     function fireArrow() {
         if (clicked) {
-            setIntervalState(intervalId);
+            runInterval();
             setClicked(false);
             getRandomTarget();
             return;
@@ -55,7 +59,6 @@ export default function App() {
         }
         clearInterval(intervalState);
         calculateScore();
-        console.log(timer)
         setArrowVisible(1);
         setArrowPos(targetPos);
     }
