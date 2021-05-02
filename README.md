@@ -4,4 +4,7 @@
     # yarn start 
 ## Or deployed on gh-pages 
     # here: https://dkurgan.github.io/ArrowGame/ 
-## Docker comming soon
+## Docker 
+    # Run command "sh runDocker.sh", will run on localhost:3000
+    # To Stop, open new tab/window, run "sh stopDocker.sh"
+    
